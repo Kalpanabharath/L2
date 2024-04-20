@@ -55,12 +55,14 @@ contentLineone.appendChild(vendorName);
 cardEl.appendChild(contentLineone);
 
 // contentlinetwo
+
 let contentLinetwo=document.createElement('div');
 contentLinetwo.className='contentLineone';
 contentLinetwo.classList.add("contentLinetwo")
 
 let price=document.createElement('p');
-price.textContent=` Rs ${product.price}.00`;
+price.className="price"
+price.textContent=`Rs ${product.price}.00`;
 contentLinetwo.appendChild(price);
 
 let compareprice=document.createElement('p');
@@ -100,8 +102,8 @@ document.addEventListener("DOMContentLoaded", function () {
 menEl.onclick=function(){
     document.getElementById('cardcontainer').innerHTML = '';
     menEl.classList.add("clicked");
-    WomenEl.classList.remove("clicked")
-    KidsEl.classList.remove("clicked")
+    WomenEl.classList.remove("clicked");
+    KidsEl.classList.remove("clicked");
     showProducts('Men');
 
 }
@@ -109,8 +111,8 @@ menEl.onclick=function(){
 WomenEl.onclick=function(){
     document.getElementById('cardcontainer').innerHTML = '';
     menEl.classList.remove("clicked");
-    WomenEl.classList.add("clicked")
-    KidsEl.classList.remove("clicked")
+    WomenEl.classList.add("clicked");
+    KidsEl.classList.remove("clicked");
     showProducts('Women');
 
 }
@@ -118,8 +120,8 @@ WomenEl.onclick=function(){
 KidsEl.onclick=function(){
     document.getElementById('cardcontainer').innerHTML = '';
     menEl.classList.remove("clicked");
-    WomenEl.classList.remove("clicked")
-    KidsEl.classList.add("clicked")
+    WomenEl.classList.remove("clicked");
+    KidsEl.classList.add("clicked");
     showProducts('Kids');
 
 }
