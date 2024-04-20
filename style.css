@@ -1,36 +1,89 @@
-@import url("https://fonts.googleapis.com/css?family=Roboto:300");
-html,
-body {
-  height: 100%;
-  width: 100%;
+*{
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-body {
-  display: flex;
+body{
+   font-family: "Inter", sans-serif;
+   width: 100vw;
+   height: 100vh;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   gap: 5vh;
+  
+}
+
+
+/* CATEGORY SELECTON */
+
+#category{
+  background-color: rgb(242, 242, 242);
+  font-weight: 700;  
+  height: 6vh;
+  display:flex;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(to right bottom, #873572, black);
+  
 }
-a {
+#category>*{
   display: inline-block;
-  color: lightgrey;
-  font-size: 16px;
-  font-family: "Roboto", sans-serif;
-  white-space: nowrap;
-  padding: 12px;
-  border: 1px solid white;
-  border-radius: 30px;
-  text-decoration: none;
-  transition: all 0.15s ease-in-out;
+  padding: 2vh 10vw;
+  
+}
+#category>*:hover{
+  background-color: black;
+  color: azure;
 }
 
-a:hover {
-  background: rgba(0, 0, 0, 0.23);
-  color: white;
-  transform: scale(1.03);
-  text-decoration: none;
-}
-a:active {
-  transform: scale(0.98);
+#category img{
+  width: 15px;
+  height: 15px;
+  filter: brightness(0) invert(1);
+  margin-right: 5px;
+
 }
 
+#cardcontainer{
+  height: 60vh;
+  width: 90vw;
+  background-color: aqua;
+} 
+.card{
+  width: 20%;
+  height: 100%;
+  background-color: brown;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.productimage{
+  width: 100%;
+  height: 75%;
+  border-radius: 5px;
+}
+.contentLineone{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 1%;
+
+}
+.linethrough{
+  text-decoration: line-through;
+}
+.discount{
+  color: red;
+}
+
+.cardbutton{
+  width: 100%;
+  height: 10%;
+  background-color: black;
+  color: aliceblue;
+  font-weight: 700;
+  border-radius: 10px;
+  outline: none;
+  border: none;
+}
