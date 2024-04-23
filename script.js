@@ -1,6 +1,9 @@
 let menEl= document.getElementById('Mencategory');
 let WomenEl= document.getElementById('Womencategory');
 let KidsEl= document.getElementById('Kidscategory');
+let menicon=document.getElementById('menicon');
+let womenicon=document.getElementById('womenicon');
+let kidicon=document.getElementById('kidicon');
 
 function showProducts(category) {
     fetch('https://cdn.shopify.com/s/files/1/0564/3685/0790/files/multiProduct.json')
@@ -61,7 +64,7 @@ contentLinetwo.className='contentLineone';
 contentLinetwo.classList.add("contentLinetwo")
 
 let price=document.createElement('p');
-price.className="price"
+price.className="price";
 price.textContent=`Rs ${product.price}.00`;
 contentLinetwo.appendChild(price);
 
@@ -97,6 +100,8 @@ function calculateDiscountPercentage(price, compareAtPrice) {
 document.addEventListener("DOMContentLoaded", function () {
     showProducts('Men');
     menEl.classList.add("clicked");
+    menicon.style.visibility="visible";
+
 });
 
 menEl.onclick=function(){
@@ -105,6 +110,9 @@ menEl.onclick=function(){
     WomenEl.classList.remove("clicked");
     KidsEl.classList.remove("clicked");
     showProducts('Men');
+    menicon.style.visibility="visible";
+    womenicon.style.visibility="hidden";
+    kidicon.style.visibility="hidden";
 
 }
 
@@ -114,6 +122,9 @@ WomenEl.onclick=function(){
     WomenEl.classList.add("clicked");
     KidsEl.classList.remove("clicked");
     showProducts('Women');
+    menicon.style.visibility="hidden";
+    womenicon.style.visibility="visible";
+    kidicon.style.visibility="hidden";
 
 }
 
@@ -123,5 +134,8 @@ KidsEl.onclick=function(){
     WomenEl.classList.remove("clicked");
     KidsEl.classList.add("clicked");
     showProducts('Kids');
+    menicon.style.visibility="hidden";
+    womenicon.style.visibility="hidden";
+    kidicon.style.visibility="visible";
 
 }

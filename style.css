@@ -30,20 +30,29 @@ body{
 }
 #category>*{
   display: inline-block;
-  padding: 1.5vh 10vw;
+  padding: 1.2vh 10vw;
   
 }
 .clicked{
   background-color: black;
   color: azure;
 }
-
-#category img{
+.icon{
   width: 15px;
   height: 15px;
   filter: brightness(0) invert(1);
   margin-right: 5px;
+  
 
+}
+#menicon{
+  visibility: hidden;
+}
+#womenicon{
+  visibility: hidden;
+}
+#kidicon{
+  visibility: hidden;
 }
 
 #cardcontainer{
